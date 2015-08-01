@@ -76,7 +76,7 @@ Main Components
 .cd-background-wrapper {
   background-color: #001426;
   position: relative;
-  overflow-x: hidden; }
+  overflow: hidden; }
   .no-touch .cd-background-wrapper {
     -webkit-perspective: 4000px;
     -moz-perspective: 4000px;

@@ -41,7 +41,7 @@ Main Components
 .cd-background-wrapper {
 	background-color: $color-3;
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	.no-touch & {
 		@include perspective(4000px);
