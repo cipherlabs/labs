@@ -61,10 +61,24 @@ Main Components
 	position: relative;
 	display:block;
 	margin: 0 auto;
-	h1 {
-		font-size: 100px;
+	.hero_title {
+		width: 500px;
+		display: block;
+		margin: 0 auto;
 		padding-top: 20%;
-		text-align: center;
+		height: 300px;
+		h1 {
+			font-size: 100px;
+			text-align: center;
+			color: $color1;
+			display: inline-block;
+			padding-right: 50px;
+			vertical-align: middle;
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 }
 
