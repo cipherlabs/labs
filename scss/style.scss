@@ -1,5 +1,6 @@
 @import 'bourbon'; // http://bourbon.io/
-
+@import 'fonts'; 
+@import 'variables'; 
 @import '../partials/variables'; // colors, fonts etc...
 
 @import '../partials/layout'; // responsive grid and media queries
@@ -21,10 +22,9 @@ html {
 body {
 	font: {
 		size: 1.6rem;
-		family: $primary-font; // variables inside partials > _variables.scss
+		family: $lightfont; // variables inside partials > _variables.scss
 	}
 	color: $color-1;
-	background: $color-3 url('../img/bg-pattern.png');
 }
 
 a {
@@ -41,7 +41,7 @@ Main Components
 .cd-background-wrapper {
 	background-color: $color-3;
 	position: relative;
-	overflow: hidden;
+	overflow-x: hidden;
 
 	.no-touch & {
 		@include perspective(4000px);
@@ -57,8 +57,18 @@ Main Components
 		/* never visible - this is used in jQuery to check the device type */
 		content: 'mobile';
 	}
+.foreground {
+	position: relative;
+	display:block;
+	margin: 0 auto;
+	h1 {
+		font-size: 100px;
+		padding-top: 20%;
+		text-align: center;
+	}
 }
 
+}
 .cd-floating-background {
 	position: relative;
 

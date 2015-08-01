@@ -1,3 +1,51 @@
+@font-face {
+  font-family: 'gothamRdBook';
+  src: url("../fonts/GothamRounded-Book.eot");
+  src: url("../fonts/GothamRounded-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamRounded-Book.woff") format("woff"), url("../fonts/GothamRounded-Book.ttf") format("truetype"), url("../fonts/GothamRounded-Book.svg#alex_brushregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gothamRdLight';
+  src: url("../fonts/GothamRounded-Light.eot");
+  src: url("../fonts/GothamRounded-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamRounded-Light.woff") format("woff"), url("../fonts/GothamRounded-Light.ttf") format("truetype"), url("../fonts/GothamRounded-Light.svg#alex_brushregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gothamRdBold';
+  src: url("../fonts/GothamRounded-Bold.eot");
+  src: url("../fonts/GothamRounded-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamRounded-Bold.woff") format("woff"), url("../fonts/GothamRounded-Bold.ttf") format("truetype"), url("../fonts/GothamRounded-Bold.svg#alex_brushregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gothamRdMedium';
+  src: url("../fonts/GothamRounded-Medium.eot");
+  src: url("../fonts/GothamRounded-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamRounded-Medium.woff") format("woff"), url("../fonts/GothamRounded-Medium.ttf") format("truetype"), url("../fonts/GothamRounded-Medium.svg#alex_brushregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'cipherIconFont';
+  src: url("../fonts/icomoon.eot?p7vee9");
+  src: url("../fonts/icomoon.eot?#iefixp7vee9") format("embedded-opentype"), url("../fonts/icomoon.ttf?p7vee9") format("truetype"), url("../fonts/icomoon.woff?p7vee9") format("woff"), url("../fonts/icomoon.svg?p7vee9#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'cipherIconFont';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-campfireB:before {
+  content: "\e600"; }
+
+.icon-cipherLogoBlack:before {
+  content: "\e601"; }
+
 /* -------------------------------- 
 
 Primary style
@@ -13,9 +61,8 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: sans-serif;
-  color: #ffffff;
-  background: #001426 url("../img/bg-pattern.png"); }
+  font-family: "gothamRdLight", sans-serif;
+  color: #ffffff; }
 
 a {
   color: #196a74;
@@ -29,7 +76,7 @@ Main Components
 .cd-background-wrapper {
   background-color: #001426;
   position: relative;
-  overflow: hidden; }
+  overflow-x: hidden; }
   .no-touch .cd-background-wrapper {
     -webkit-perspective: 4000px;
     -moz-perspective: 4000px;
@@ -41,6 +88,14 @@ Main Components
   .touch .cd-background-wrapper::before {
     /* never visible - this is used in jQuery to check the device type */
     content: 'mobile'; }
+  .cd-background-wrapper .foreground {
+    position: relative;
+    display: block;
+    margin: 0 auto; }
+    .cd-background-wrapper .foreground h1 {
+      font-size: 100px;
+      padding-top: 20%;
+      text-align: center; }
 
 .cd-floating-background {
   position: relative; }
