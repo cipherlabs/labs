@@ -24,6 +24,7 @@ body {
 		family: $lightfont; // variables inside partials > _variables.scss
 	}
 	color: $color-1;
+	background-color: $darkbg;
 }
 
 a {
@@ -58,26 +59,32 @@ Main Components
 	}
 .foreground {
 	position: relative;
-	display:block;
-	margin: 0 auto;
-	.hero_title {
-		width: 50%;
+	.hero_content {
+		width: 500px;
 		display: block;
-		margin: 0 auto;
+		margin: 0 20%;
 		padding-top: 20%;
-		height: 300px;
-		h1 {
-			font-size: 100px;
-			text-align: center;
-			color: $color1;
-			display: inline-block;
-			padding-right: 50px;
-			vertical-align: middle;
+		height: 500px; 
+		padding-bottom: 100px;
+		.hero_title {
+			padding-bottom: 50px;
+			h4{ padding-bottom: 50px; }
+			h1 {
+					font-size: 100px;
+					color: $grey50;
+					font-weight: 300;
+					vertical-align: middle;
+					display: inline-block;
+				}
+				img {
+					display: inline-block;
+					vertical-align: middle;
+					width: 120px;		
+				}
 		}
-		img {
-			display: inline-block;
-			vertical-align: middle;
-		}
+		.hero_subtitle {
+				
+		}	
 	}
 }
 
@@ -127,3 +134,100 @@ Main Components
 		position: relative;
 	}
 }
+
+.use-btn {
+    display: inline-block;
+    margin: 20px 0px;
+    padding: 20px 50px;
+    border-radius: 2px;
+    background-color: $color2;
+    color: white;
+    font-size: 16px;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+    box-shadow: 0 2px 5px 0 $shadow;   
+    cursor: pointer;
+    &.typeform-share .bttn {
+      display: inline-block;
+      // margin: 20px 0px;
+      padding: 20px 50px;
+      border-radius: 2px;
+      color: #fff;
+      background-color: $color2;      
+      font-size: 16px; 
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      cursor: pointer;    
+      &:hover, &:focus, &:active {
+          background-color: $color2d;
+          color: white;
+          text-decoration: none;
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+          transition-delay: 0s;
+      } 
+    }    
+      &:hover, &:focus, &:active {
+          background-color: $color2d;
+          color: white;
+          text-decoration: none;
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+          transition-delay: 0s;
+      }
+}
+.learn-btn, .download-btn {
+    display: inline-block;
+    // margin: 20px 0px;
+    padding: 20px 50px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: $colorCTA;
+    font-size: 16px; 
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0.2s;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    &.typeform-share .bttn {
+      display: inline-block;
+      // margin: 20px 0px;
+      padding: 20px 50px;
+      border-radius: 2px;
+      color: #fff;
+      background-color: $colorCTA;
+      font-size: 16px; 
+      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: 0.2s;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      cursor: pointer;      
+    }
+    &.orange {
+      background-color: $color1;
+    } 
+    &.form-btn {
+      border: 2px solid $colorCTA;
+      form input {
+          border: 2px solid $colorCTA;
+      }
+      &:hover {
+          border: 2px solid $colorCTAdark;
+      }
+    }
+      &:hover, &:focus, &:active {
+          background-color: $colorCTAdark;
+          color: white;
+          text-decoration: none;
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+          transition-delay: 0s;
+      }
+}
+
+@media screen and (max-width:991px){ 
+	.cd-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h4 { padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
+}
+
+@media screen and (max-width:680px){
+	.cd-background-wrapper .foreground .hero_content { height: 300px;  .hero_title { h4 { padding-bottom: 30px; } h1 { font-size: 60px;} img { width: 80px; }} }	
+}
+@media screen and (max-width:465px){
+	.cd-background-wrapper { .foreground .hero_content { height: 50px; padding-top: 10%; .hero_title { padding-bottom: 20px; h4 { padding-bottom: 5px; } h1 { font-size: 40px;} img { width: 60px; } } .use-btn { display: none; } }}
+} 
