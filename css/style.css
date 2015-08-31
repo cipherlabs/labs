@@ -405,6 +405,16 @@ header {
   padding: 200px;
   color: #fafafa; }
 
+#footer {
+  background-color: #001B1B; }
+  #footer h2 {
+    color: #FAFAFA; }
+
+.footer_logo img {
+  width: 500px;
+  display: block;
+  margin: 0 auto; }
+
 @media screen and (max-width: 991px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 400px; }
