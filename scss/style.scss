@@ -22,7 +22,7 @@ body {
 	font: {
 		family: $lightfont; // variables inside partials > _variables.scss
 	}
-	background-color: #001534;
+	background-color: #041938;
 }
 
 a {
@@ -265,7 +265,7 @@ body::after {
 header {
 	position: relative;
 	height: 50%;
-	background-color: #001534;
+	background-color: #041938;
 	z-index: 2;
 
 	h1 {
@@ -294,7 +294,7 @@ header {
 	z-index: 2;
 	min-height: $icon-small-height;
 	margin-left: $icon-small-width;
-	background-color: #001534;
+	background-color: #041938;
 	padding: 1em 1em 4em;
 
 	&::before, &::after {
