@@ -70,7 +70,7 @@ Main Components
 
 -------------------------------- */
 .cipher-background-wrapper {
-  background-color: #001426;
+  background-color: #041938;
   position: relative;
   overflow: hidden; }
   .no-touch .cipher-background-wrapper {
@@ -397,7 +397,8 @@ header {
   background-image: url(../img/pineforestdusk.png);
   z-index: 2;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position-y: 90%; }
 
 @media screen and (max-width: 991px) {
   .cipher-background-wrapper .foreground .hero_content {
