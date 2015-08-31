@@ -73,57 +73,70 @@ Main Components
   background-color: #001426;
   position: relative;
   overflow: hidden; }
-  .no-touch .cipher-background-wrapper {
+
+.no-touch .cipher-background-wrapper {
     -webkit-perspective: 4000px;
     -moz-perspective: 4000px;
     perspective: 4000px; }
-  .cipher-background-wrapper::before {
+
+.cipher-background-wrapper::before {
     /* never visible - this is used in jQuery to check the device type */
     content: 'web';
     display: none; }
-  .touch .cipher-background-wrapper::before {
+
+.touch .cipher-background-wrapper::before {
     /* never visible - this is used in jQuery to check the device type */
     content: 'mobile'; }
-  .cipher-background-wrapper .foreground {
+
+.cipher-background-wrapper .foreground {
     position: relative; }
-    .cipher-background-wrapper .foreground .hero_content {
-      width: 500px;
-      display: block;
-      margin: 0 20%;
-      padding-top: 20%;
-      height: 500px;
-      padding-bottom: 100px; }
-      .cipher-background-wrapper .foreground .hero_content .hero_title {
-        padding-bottom: 50px; }
-        .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
-          padding-bottom: 50px; }
-        .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
-          font-size: 100px;
-          color: #FAFAFA;
-          font-weight: 300;
-          vertical-align: middle;
-          display: inline-block; }
-        .cipher-background-wrapper .foreground .hero_content .hero_title img {
-          display: inline-block;
-          vertical-align: middle;
-          width: 120px; }
-      .cipher-background-wrapper .foreground .hero_content #icon_font {
-        font-size: 30px; }
+
+.cipher-background-wrapper .foreground .hero_content {
+    width: 500px;
+    display: block;
+    margin: 0 20%;
+    padding-top: 20%;
+    height: 500px;
+    padding-bottom: 100px; }
+
+.cipher-background-wrapper .foreground .hero_content .hero_title {
+    padding-bottom: 50px; }
+
+.cipher-background-wrapper .foreground .hero_content .hero_title h4 {
+    padding-bottom: 50px; }
+
+.cipher-background-wrapper .foreground .hero_content .hero_title h1 {
+    font-size: 100px;
+    color: #FAFAFA;
+    font-weight: 300;
+    vertical-align: middle;
+    display: inline-block; }
+
+.cipher-background-wrapper .foreground .hero_content .hero_title img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 120px; }
+
+.cipher-background-wrapper .foreground .hero_content #icon_font {
+    font-size: 30px; }
 
 .cipher-floating-background {
-  position: relative; }
-  .cipher-floating-background img {
+    position: relative; }
+
+.cipher-floating-background img {
     display: block;
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     /* fixes a Firefox bug - images not correctly rendered*/
     background-color: rgba(255, 255, 255, 0.01); }
-  .cipher-floating-background img:not(:first-child) {
+
+.cipher-floating-background img:not(:first-child) {
     position: absolute;
     top: 0;
     left: 0; }
-  .no-touch .cipher-floating-background {
+
+.no-touch .cipher-floating-background {
     top: 0;
     left: 0;
     -webkit-transform-style: preserve-3d;
@@ -136,27 +149,32 @@ Main Components
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0); }
-    .no-touch .cipher-floating-background.is-absolute {
+
+.no-touch .cipher-floating-background.is-absolute {
       position: absolute; }
-    .no-touch .cipher-floating-background img:first-child {
+
+.no-touch .cipher-floating-background img:first-child {
       -webkit-transform: translateZ(50px);
       -moz-transform: translateZ(50px);
       -ms-transform: translateZ(50px);
       -o-transform: translateZ(50px);
       transform: translateZ(50px); }
-    .no-touch .cipher-floating-background img:nth-child(2) {
+
+.no-touch .cipher-floating-background img:nth-child(2) {
       -webkit-transform: translateZ(290px);
       -moz-transform: translateZ(290px);
       -ms-transform: translateZ(290px);
       -o-transform: translateZ(290px);
       transform: translateZ(290px); }
-    .no-touch .cipher-floating-background img:nth-child(3) {
+
+.no-touch .cipher-floating-background img:nth-child(3) {
       -webkit-transform: translateZ(400px);
       -moz-transform: translateZ(400px);
       -ms-transform: translateZ(400px);
       -o-transform: translateZ(400px);
       transform: translateZ(400px); }
-  .no-touch.no-preserve-3d .cipher-floating-background {
+
+.no-touch.no-preserve-3d .cipher-floating-background {
     /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
     position: relative; }
 
@@ -172,7 +190,8 @@ Main Components
   transition-delay: 0.2s;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   cursor: pointer; }
-  .use-btn.typeform-share .bttn {
+
+.use-btn.typeform-share .bttn {
     display: inline-block;
     padding: 20px 50px;
     border-radius: 2px;
@@ -183,13 +202,15 @@ Main Components
     transition-delay: 0.2s;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     cursor: pointer; }
-    .use-btn.typeform-share .bttn:hover, .use-btn.typeform-share .bttn:focus, .use-btn.typeform-share .bttn:active {
-      background-color: #4bb3a7;
-      color: white;
-      text-decoration: none;
-      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
-      transition-delay: 0s; }
-  .use-btn:hover, .use-btn:focus, .use-btn:active {
+
+.use-btn.typeform-share .bttn:hover, .use-btn.typeform-share .bttn:focus, .use-btn.typeform-share .bttn:active {
+    background-color: #4bb3a7;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+    transition-delay: 0s; }
+
+.use-btn:hover, .use-btn:focus, .use-btn:active {
     background-color: #4bb3a7;
     color: white;
     text-decoration: none;
@@ -207,7 +228,8 @@ Main Components
   transition-delay: 0.2s;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   cursor: pointer; }
-  .learn-btn.typeform-share .bttn, .download-btn.typeform-share .bttn {
+ 
+.learn-btn.typeform-share .bttn, .download-btn.typeform-share .bttn {
     display: inline-block;
     padding: 20px 50px;
     border-radius: 2px;
@@ -218,15 +240,20 @@ Main Components
     transition-delay: 0.2s;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     cursor: pointer; }
-  .learn-btn.orange, .download-btn.orange {
+
+.learn-btn.orange, .download-btn.orange {
     background-color: #f9bb3c; }
-  .learn-btn.form-btn, .download-btn.form-btn {
+
+.learn-btn.form-btn, .download-btn.form-btn {
     border: 2px solid #df4e5e; }
-    .learn-btn.form-btn form input, .download-btn.form-btn form input {
+
+.learn-btn.form-btn form input, .download-btn.form-btn form input {
       border: 2px solid #df4e5e; }
-    .learn-btn.form-btn:hover, .download-btn.form-btn:hover {
+
+.learn-btn.form-btn:hover, .download-btn.form-btn:hover {
       border: 2px solid #CB293C; }
-  .learn-btn:hover, .learn-btn:focus, .learn-btn:active, .download-btn:hover, .download-btn:focus, .download-btn:active {
+
+.learn-btn:hover, .learn-btn:focus, .learn-btn:active, .download-btn:hover, .download-btn:focus, .download-btn:active {
     background-color: #CB293C;
     color: white;
     text-decoration: none;
@@ -349,87 +376,115 @@ header {
     font-size: 0.875rem;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.5); }
-  @media only screen and (min-width: 1024px) {
-    .cipher-service {
-      min-height: 525px;
-      margin-left: 420px;
-      padding: 6em 2em; }
-      .cipher-service::before, .cipher-service::after {
-        width: 420px; }
-      .cipher-service::before {
-        height: 325px; }
-      .cipher-service::after {
-        top: 325px;
-        background-image: url("../img/cipher-pattern-large.svg"); }
-      .cipher-service.cipher-service-divider:first-child, .cipher-service.cipher-service-divider:last-child {
-        min-height: 50px;
-        padding: 0; }
-      .cipher-service.cipher-service-divider:last-child {
-        display: block; }
-      .cipher-service.cipher-service-1::before {
-        background-image: url("../img/cipher-icon-1-large.svg"); }
-      .cipher-service.cipher-service-2::before {
-        background-image: url("../img/cipher-icon-2-large.svg"); }
-      .cipher-service.cipher-service-3::before {
-        background-image: url("../img/cipher-icon-3-large.svg"); }
-      .cipher-service.cipher-service-4::before {
-        background-image: url("../img/cipher-icon-4-large.svg"); }
-      .cipher-service h2, .cipher-service p {
-        color: #196a74;
-        -webkit-transition: color, 0.5s;
-        -moz-transition: color, 0.5s;
-        transition: color, 0.5s; }
-      .cipher-service h2 {
-        font-size: 30px;
-        font-size: 1.875rem; }
-      .cipher-service p {
-        font-size: 18px;
-        font-size: 1.125rem;
-        line-height: 1.6; }
-      .cipher-service.focus h2 {
-        color: #ffffff; }
-      .cipher-service.focus p {
-        color: rgba(255, 255, 255, 0.5); } }
 
-.separator {
-  position: relative;
-  height: 500px;
-  background-image: url(../img/pineforestdusk.png);
-  z-index: 2;
-  background-size: cover;
-  background-repeat: no-repeat; }
+@media only screen and (min-width: 1024px) {
+  .cipher-service {
+    min-height: 525px;
+    margin-left: 420px;
+    padding: 6em 2em; }
+
+  .cipher-service::before, .cipher-service::after {
+    width: 420px; }
+
+  .cipher-service::before {
+    height: 325px; }
+
+  .cipher-service::after {
+    top: 325px;
+    background-image: url("../img/cipher-pattern-large.svg"); }
+    
+  .cipher-service.cipher-service-divider:first-child, .cipher-service.cipher-service-divider:last-child {
+    min-height: 50px;
+    padding: 0; }
+    
+  .cipher-service.cipher-service-divider:last-child {
+    display: block; }
+    
+  .cipher-service.cipher-service-1::before {
+    background-image: url("../img/cipher-icon-1-large.svg"); }
+    
+  .cipher-service.cipher-service-2::before {
+    background-image: url("../img/cipher-icon-2-large.svg"); }
+    
+  .cipher-service.cipher-service-3::before {
+    background-image: url("../img/cipher-icon-3-large.svg"); }
+    
+  .cipher-service.cipher-service-4::before {
+    background-image: url("../img/cipher-icon-4-large.svg"); }
+    
+  .cipher-service h2, .cipher-service p {
+    color: #196a74;
+    -webkit-transition: color, 0.5s;
+    -moz-transition: color, 0.5s;
+    transition: color, 0.5s; }
+    
+  .cipher-service h2 {
+    font-size: 30px;
+    font-size: 1.875rem; }
+    
+  .cipher-service p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6; }
+
+  .cipher-service.focus h2 {
+    color: #ffffff; }
+    
+  .cipher-service.focus p {
+    color: rgba(255, 255, 255, 0.5); } }
+
+  .separator {
+    position: relative;
+    height: 500px;
+    background-image: url(../img/pineforestdusk.png);
+    z-index: 2;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 @media screen and (max-width: 991px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 400px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
       padding-bottom: 40px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
       font-size: 80px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title img {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title img {
       width: 100px; } }
+
 @media screen and (max-width: 680px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 300px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
+
+  .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
       padding-bottom: 30px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
       font-size: 60px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title img {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title img {
       width: 80px; } }
+
 @media screen and (max-width: 465px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 50px;
     padding-top: 10%; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title {
       padding-bottom: 20px; }
-      .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
         padding-bottom: 5px; }
-      .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
         font-size: 40px; }
-      .cipher-background-wrapper .foreground .hero_content .hero_title img {
+    
+  .cipher-background-wrapper .foreground .hero_content .hero_title img {
         width: 60px; }
-    .cipher-background-wrapper .foreground .hero_content .use-btn {
+    
+  .cipher-background-wrapper .foreground .hero_content .use-btn {
       display: none; } }
 
 /*# sourceMappingURL=style.css.map */
