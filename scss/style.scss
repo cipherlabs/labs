@@ -20,11 +20,9 @@ html {
 
 body {
 	font: {
-		size: 1.6rem;
 		family: $lightfont; // variables inside partials > _variables.scss
 	}
-	color: $color-1;
-	background-color: $darkbg;
+	background-color: #001534;
 }
 
 a {
@@ -38,7 +36,7 @@ Main Components
 
 -------------------------------- */
 
-.cd-background-wrapper {
+.cipher-background-wrapper {
 	background-color: $color-3;
 	position: relative;
 	overflow: hidden;
@@ -85,11 +83,14 @@ Main Components
 		.hero_subtitle {
 				
 		}	
+		#icon_font {
+			font-size: 30px;
+		}		
 	}
 }
 
 }
-.cd-floating-background {
+.cipher-floating-background {
 	position: relative;
 
 	img {
@@ -137,7 +138,7 @@ Main Components
 
 .use-btn {
     display: inline-block;
-    margin: 20px 0px;
+    margin: 20px 20px;
     padding: 20px 50px;
     border-radius: 2px;
     background-color: $color2;
@@ -220,14 +221,221 @@ Main Components
           transition-delay: 0s;
       }
 }
+html, body {
+	height: 100%;
+}
+
+@include MQ(L) {
+	body.new-color-1::before {
+		background-color: $color-4;
+	}
+
+	body.new-color-2::before {
+		background-color: $color-5;
+	}
+
+	body.new-color-3::before {
+		background-color: $color-6;
+	}
+}
+
+body::before, body::after {
+	/* the 2 underneath colored sections */
+	content: '';
+	position: fixed;
+	/* trick to remove some annoying flickering on webkit browsers */
+	width: 89.8%;
+	max-width: $L;
+	@include center(x);
+	height: 50%;
+	z-index: -1;
+}
+
+body::before {
+	top: 0;
+	background-color: #f4bd89;
+	@include transition(all .8s);
+}
+
+body::after {
+	top: 50%;
+	background-color: $color-2;
+}
+
+header {
+	position: relative;
+	height: 50%;
+	background-color: #001534;
+	z-index: 2;
+
+	h1 {
+		position: absolute;
+		@include center;
+		width: 90%;
+		max-width: $L;
+		text-align: center;
+		color: $color-6;
+		@include font-size(56px);
+	}
+}
+.cipher-container { /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+	width: 90%;
+	max-width: $L; // breakpoints inside partials > _layout.scss
+	margin: 0 auto;
+
+	&::after { /* clearfix */
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+.cipher-service {
+	position: relative;
+	z-index: 2;
+	min-height: $icon-small-height;
+	margin-left: $icon-small-width;
+	background-color: #001534;
+	padding: 1em 1em 4em;
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		width: $icon-small-width;
+		right: 100%;
+		z-index: 2;
+	}
+	
+	&::before {
+		top: 0;
+		height: $icon-small-height;
+		background-repeat: no-repeat;
+	}
+
+	&::after {
+		top: $icon-small-height;
+		bottom: 0;
+		background-image: url('../img/cipher-pattern-small.svg');
+		background-repeat: repeat-y;
+	}
+
+	&.cipher-service-divider::after {
+		top: 0;
+	}
+
+	&.cipher-service-divider:last-child {
+		display: none;
+	}
+
+	&.cipher-service-1::before {
+		background-image: url('../img/cipher-icon-1-small.svg');
+	}
+
+	&.cipher-service-2::before {
+		background-image: url('../img/cipher-icon-2-small.svg');
+	}
+
+	&.cipher-service-3::before {
+		background-image: url('../img/cipher-icon-3-small.svg');
+	}
+	
+	&.cipher-service-4::before {
+		background-image: url('../img/cipher-icon-4-small.svg');
+	}
+
+	h2 {
+		color: $color-7;
+		margin-bottom: 1em;
+	}
+
+	p {
+		@include font-size(14px);
+		line-height: 1.4;
+		color: rgba($color-7, .5);
+	}
+
+	@include MQ(L) {
+		min-height: $icon-large-height + 200px;
+		margin-left: $icon-large-width;
+		padding: 6em 2em;
+
+		&::before, &::after {
+			width: $icon-large-width;
+		}
+
+		&::before {
+			height: $icon-large-height;
+		}
+
+		&::after {
+			top: $icon-large-height;
+			background-image: url('../img/cipher-pattern-large.svg');
+		}
+
+		&.cipher-service-divider:first-child, &.cipher-service-divider:last-child {
+			min-height: 50px;
+			padding: 0;
+		}
+
+		&.cipher-service-divider:last-child {
+			display: block;
+		}
+
+		&.cipher-service-1::before {
+			background-image: url('../img/cipher-icon-1-large.svg');
+		}
+
+		&.cipher-service-2::before {
+			background-image: url('../img/cipher-icon-2-large.svg');
+		}
+
+		&.cipher-service-3::before {
+			background-image: url('../img/cipher-icon-3-large.svg');
+		}
+		
+		&.cipher-service-4::before {
+			background-image: url('../img/cipher-icon-4-large.svg');
+		}
+
+		h2, p {
+			color: $color-2;
+			@include transition(color, .5s);
+		}
+
+		h2 {
+			@include font-size(30px);
+		}
+
+		p {
+			@include font-size(18px);
+			line-height: 1.6;
+		}
+
+		&.focus h2 {
+			color: $color-7;
+		}
+
+		&.focus p {
+			color: rgba($color-7, .5);
+		}
+	}
+}
+
+.separator {
+	position: relative;
+	height: 500px;
+	background-image: url(../img/pineforestdusk.png);
+	z-index: 2;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
 @media screen and (max-width:991px){ 
-	.cd-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h4 { padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
+	.cipher-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h4 { padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
 }
 
 @media screen and (max-width:680px){
-	.cd-background-wrapper .foreground .hero_content { height: 300px;  .hero_title { h4 { padding-bottom: 30px; } h1 { font-size: 60px;} img { width: 80px; }} }	
+	.cipher-background-wrapper .foreground .hero_content { height: 300px;  .hero_title { h4 { padding-bottom: 30px; } h1 { font-size: 60px;} img { width: 80px; }} }	
 }
 @media screen and (max-width:465px){
-	.cd-background-wrapper { .foreground .hero_content { height: 50px; padding-top: 10%; .hero_title { padding-bottom: 20px; h4 { padding-bottom: 5px; } h1 { font-size: 40px;} img { width: 60px; } } .use-btn { display: none; } }}
+	.cipher-background-wrapper { .foreground .hero_content { height: 50px; padding-top: 10%; .hero_title { padding-bottom: 20px; h4 { padding-bottom: 5px; } h1 { font-size: 40px;} img { width: 60px; } } .use-btn { display: none; } }}
 } 

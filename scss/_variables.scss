@@ -43,6 +43,25 @@ $superslow: color 300ms ease;
 $shadow: rgba(0, 0, 0, 0.26);
 $darkshadow: rgba(0, 0, 0, 0.56);
 
+// colors
+
+$color-1: #3e253c; // purple 1
+$color-2: #71495b; // purple 2
+$color-3: #f4bd89; // yellow
+$color-4: #c06c69; // salmon
+$color-5: #bf69c0; // purple 3
+$color-6: #699ec0; // blue
+$color-7: #ffffff; // white
+
+// fonts 
+
+// icons sizes
+
+$icon-small-height: 50px;
+$icon-small-width: 56px;
+$icon-large-height: 325px;
+$icon-large-width: 420px;
+
 @mixin textshadowLight($shadow) {
       text-shadow: 0.5px 0.5px $shadow;
 }
@@ -93,4 +112,60 @@ $darkshadow: rgba(0, 0, 0, 0.56);
 	-ms-transition: padding-left 600ms;
 	transition: padding-left 600ms;
 }
+
+// rem fallback - credits: http://zerosixthree.se/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}
+
+// breakpoints
+   
+$S:     320px;   
+$M:     768px;     
+$L:     1170px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+
 

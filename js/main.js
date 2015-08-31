@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	//check media query
-	var mediaQuery = window.getComputedStyle(document.querySelector('.cd-background-wrapper'), '::before').getPropertyValue('content').replace(/"/g, '').replace(/'/g, ""),
+	var mediaQuery = window.getComputedStyle(document.querySelector('.cipher-background-wrapper'), '::before').getPropertyValue('content').replace(/"/g, '').replace(/'/g, ""),
 		//define store some initial variables
 		halfWindowH = $(window).height()*0.5,
 		halfWindowW = $(window).width()*0.5,
@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 		aspectRatio;
 
 	//detect if hero <img> has been loaded and evaluate its aspect-ratio
-	$('.cd-floating-background').find('img').eq(0).load(function() {
+	$('.cipher-floating-background').find('img').eq(0).load(function() {
 		aspectRatio = $(this).width()/$(this).height();
   		if( mediaQuery == 'web' && $('html').hasClass('preserve-3d') ) initBackground();
 	}).each(function() {
@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 	});
 	
 	//detect mouse movement
-	$('.cd-background-wrapper').on('mousemove', function(event){
+	$('.cipher-background-wrapper').on('mousemove', function(event){
 		if( mediaQuery == 'web' && $('html').hasClass('preserve-3d') ) {
 			window.requestAnimationFrame(function(){
 				moveBackground(event);
@@ -27,9 +27,9 @@ jQuery(document).ready(function($){
 		}
 	});
 
-	//on resize - adjust .cd-background-wrapper and .cd-floating-background dimentions and position
+	//on resize - adjust .cipher-background-wrapper and .cipher-floating-background dimentions and position
 	$(window).on('resize', function(){
-		mediaQuery = window.getComputedStyle(document.querySelector('.cd-background-wrapper'), '::before').getPropertyValue('content').replace(/"/g, '').replace(/'/g, "");
+		mediaQuery = window.getComputedStyle(document.querySelector('.cipher-background-wrapper'), '::before').getPropertyValue('content').replace(/"/g, '').replace(/'/g, "");
 		if( mediaQuery == 'web' && $('html').hasClass('preserve-3d') ) {
 			window.requestAnimationFrame(function(){
 				halfWindowH = $(window).height()*0.5,
@@ -37,8 +37,8 @@ jQuery(document).ready(function($){
 				initBackground();
 			});
 		} else {
-			$('.cd-background-wrapper').attr('style', '');
-			$('.cd-floating-background').attr('style', '').removeClass('is-absolute');
+			$('.cipher-background-wrapper').attr('style', '');
+			$('.cipher-floating-background').attr('style', '').removeClass('is-absolute');
 		}
 	});
 
@@ -50,12 +50,12 @@ jQuery(document).ready(function($){
 			newLeft = halfWindowW - newImageWidth/2,
 			newTop = (wrapperHeight - newImageHeight)/2;
 
-		//set an height for the .cd-background-wrapper
-		$('.cd-background-wrapper').css({
+		//set an height for the .cipher-background-wrapper
+		$('.cipher-background-wrapper').css({
 			'height' : wrapperHeight,
 		});
-		//set dimentions and position of the .cd-background-wrapper		
-		$('.cd-floating-background').addClass('is-absolute').css({
+		//set dimentions and position of the .cipher-background-wrapper		
+		$('.cipher-floating-background').addClass('is-absolute').css({
 			'left' : newLeft,
 			'top' : newTop,
 			'width' : newImageWidth,
@@ -71,7 +71,7 @@ jQuery(document).ready(function($){
 		if( rotateX > maxRotationX) rotateX = maxRotationX;
 		if( rotateX < -maxRotationX ) rotateX = -maxRotationX;
 
-		$('.cd-floating-background').css({
+		$('.cipher-floating-background').css({
 			'-moz-transform': 'rotateX(' + rotateX + 'deg' + ') rotateY(' + rotateY + 'deg' + ') translateZ(0)',
 		    '-webkit-transform': 'rotateX(' + rotateX + 'deg' + ') rotateY(' + rotateY + 'deg' + ') translateZ(0)',
 			'-ms-transform': 'rotateX(' + rotateX + 'deg' + ') rotateY(' + rotateY + 'deg' + ') translateZ(0)',

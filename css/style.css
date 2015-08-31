@@ -57,10 +57,8 @@ Primary style
   box-sizing: border-box; }
 
 body {
-  font-size: 1.6rem;
   font-family: "gothamRdLight", sans-serif;
-  color: #ffffff;
-  background-color: #2C3840; }
+  background-color: #001534; }
 
 a {
   color: #196a74;
@@ -71,59 +69,61 @@ a {
 Main Components 
 
 -------------------------------- */
-.cd-background-wrapper {
+.cipher-background-wrapper {
   background-color: #001426;
   position: relative;
   overflow: hidden; }
-  .no-touch .cd-background-wrapper {
+  .no-touch .cipher-background-wrapper {
     -webkit-perspective: 4000px;
     -moz-perspective: 4000px;
     perspective: 4000px; }
-  .cd-background-wrapper::before {
+  .cipher-background-wrapper::before {
     /* never visible - this is used in jQuery to check the device type */
     content: 'web';
     display: none; }
-  .touch .cd-background-wrapper::before {
+  .touch .cipher-background-wrapper::before {
     /* never visible - this is used in jQuery to check the device type */
     content: 'mobile'; }
-  .cd-background-wrapper .foreground {
+  .cipher-background-wrapper .foreground {
     position: relative; }
-    .cd-background-wrapper .foreground .hero_content {
+    .cipher-background-wrapper .foreground .hero_content {
       width: 500px;
       display: block;
       margin: 0 20%;
       padding-top: 20%;
       height: 500px;
       padding-bottom: 100px; }
-      .cd-background-wrapper .foreground .hero_content .hero_title {
+      .cipher-background-wrapper .foreground .hero_content .hero_title {
         padding-bottom: 50px; }
-        .cd-background-wrapper .foreground .hero_content .hero_title h4 {
+        .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
           padding-bottom: 50px; }
-        .cd-background-wrapper .foreground .hero_content .hero_title h1 {
+        .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
           font-size: 100px;
           color: #FAFAFA;
           font-weight: 300;
           vertical-align: middle;
           display: inline-block; }
-        .cd-background-wrapper .foreground .hero_content .hero_title img {
+        .cipher-background-wrapper .foreground .hero_content .hero_title img {
           display: inline-block;
           vertical-align: middle;
           width: 120px; }
+      .cipher-background-wrapper .foreground .hero_content #icon_font {
+        font-size: 30px; }
 
-.cd-floating-background {
+.cipher-floating-background {
   position: relative; }
-  .cd-floating-background img {
+  .cipher-floating-background img {
     display: block;
     width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     /* fixes a Firefox bug - images not correctly rendered*/
     background-color: rgba(255, 255, 255, 0.01); }
-  .cd-floating-background img:not(:first-child) {
+  .cipher-floating-background img:not(:first-child) {
     position: absolute;
     top: 0;
     left: 0; }
-  .no-touch .cd-floating-background {
+  .no-touch .cipher-floating-background {
     top: 0;
     left: 0;
     -webkit-transform-style: preserve-3d;
@@ -136,33 +136,33 @@ Main Components
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0); }
-    .no-touch .cd-floating-background.is-absolute {
+    .no-touch .cipher-floating-background.is-absolute {
       position: absolute; }
-    .no-touch .cd-floating-background img:first-child {
+    .no-touch .cipher-floating-background img:first-child {
       -webkit-transform: translateZ(50px);
       -moz-transform: translateZ(50px);
       -ms-transform: translateZ(50px);
       -o-transform: translateZ(50px);
       transform: translateZ(50px); }
-    .no-touch .cd-floating-background img:nth-child(2) {
+    .no-touch .cipher-floating-background img:nth-child(2) {
       -webkit-transform: translateZ(290px);
       -moz-transform: translateZ(290px);
       -ms-transform: translateZ(290px);
       -o-transform: translateZ(290px);
       transform: translateZ(290px); }
-    .no-touch .cd-floating-background img:nth-child(3) {
+    .no-touch .cipher-floating-background img:nth-child(3) {
       -webkit-transform: translateZ(400px);
       -moz-transform: translateZ(400px);
       -ms-transform: translateZ(400px);
       -o-transform: translateZ(400px);
       transform: translateZ(400px); }
-  .no-touch.no-preserve-3d .cd-floating-background {
+  .no-touch.no-preserve-3d .cipher-floating-background {
     /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
     position: relative; }
 
 .use-btn {
   display: inline-block;
-  margin: 20px 0px;
+  margin: 20px 20px;
   padding: 20px 50px;
   border-radius: 2px;
   background-color: #31bda5;
@@ -233,37 +233,203 @@ Main Components
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
     transition-delay: 0s; }
 
+html, body {
+  height: 100%; }
+
+@media only screen and (min-width: 1024px) {
+  body.new-color-1::before {
+    background-color: #c06c69; }
+
+  body.new-color-2::before {
+    background-color: #bf69c0; }
+
+  body.new-color-3::before {
+    background-color: #699ec0; } }
+body::before, body::after {
+  /* the 2 underneath colored sections */
+  content: '';
+  position: fixed;
+  /* trick to remove some annoying flickering on webkit browsers */
+  width: 89.8%;
+  max-width: 1024px;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 50%;
+  z-index: -1; }
+
+body::before {
+  top: 0;
+  background-color: #f4bd89;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  transition: all 0.8s; }
+
+body::after {
+  top: 50%;
+  background-color: #196a74; }
+
+header {
+  position: relative;
+  height: 50%;
+  background-color: #001534;
+  z-index: 2; }
+  header h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 1024px;
+    text-align: center;
+    color: #699ec0;
+    font-size: 56px;
+    font-size: 3.5rem; }
+
+.cipher-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto; }
+  .cipher-container::after {
+    /* clearfix */
+    content: '';
+    display: table;
+    clear: both; }
+
+.cipher-service {
+  position: relative;
+  z-index: 2;
+  min-height: 50px;
+  margin-left: 56px;
+  background-color: #001534;
+  padding: 1em 1em 4em; }
+  .cipher-service::before, .cipher-service::after {
+    content: '';
+    position: absolute;
+    width: 56px;
+    right: 100%;
+    z-index: 2; }
+  .cipher-service::before {
+    top: 0;
+    height: 50px;
+    background-repeat: no-repeat; }
+  .cipher-service::after {
+    top: 50px;
+    bottom: 0;
+    background-image: url("../img/cipher-pattern-small.svg");
+    background-repeat: repeat-y; }
+  .cipher-service.cipher-service-divider::after {
+    top: 0; }
+  .cipher-service.cipher-service-divider:last-child {
+    display: none; }
+  .cipher-service.cipher-service-1::before {
+    background-image: url("../img/cipher-icon-1-small.svg"); }
+  .cipher-service.cipher-service-2::before {
+    background-image: url("../img/cipher-icon-2-small.svg"); }
+  .cipher-service.cipher-service-3::before {
+    background-image: url("../img/cipher-icon-3-small.svg"); }
+  .cipher-service.cipher-service-4::before {
+    background-image: url("../img/cipher-icon-4-small.svg"); }
+  .cipher-service h2 {
+    color: #ffffff;
+    margin-bottom: 1em; }
+  .cipher-service p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.5); }
+  @media only screen and (min-width: 1024px) {
+    .cipher-service {
+      min-height: 525px;
+      margin-left: 420px;
+      padding: 6em 2em; }
+      .cipher-service::before, .cipher-service::after {
+        width: 420px; }
+      .cipher-service::before {
+        height: 325px; }
+      .cipher-service::after {
+        top: 325px;
+        background-image: url("../img/cipher-pattern-large.svg"); }
+      .cipher-service.cipher-service-divider:first-child, .cipher-service.cipher-service-divider:last-child {
+        min-height: 50px;
+        padding: 0; }
+      .cipher-service.cipher-service-divider:last-child {
+        display: block; }
+      .cipher-service.cipher-service-1::before {
+        background-image: url("../img/cipher-icon-1-large.svg"); }
+      .cipher-service.cipher-service-2::before {
+        background-image: url("../img/cipher-icon-2-large.svg"); }
+      .cipher-service.cipher-service-3::before {
+        background-image: url("../img/cipher-icon-3-large.svg"); }
+      .cipher-service.cipher-service-4::before {
+        background-image: url("../img/cipher-icon-4-large.svg"); }
+      .cipher-service h2, .cipher-service p {
+        color: #196a74;
+        -webkit-transition: color, 0.5s;
+        -moz-transition: color, 0.5s;
+        transition: color, 0.5s; }
+      .cipher-service h2 {
+        font-size: 30px;
+        font-size: 1.875rem; }
+      .cipher-service p {
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1.6; }
+      .cipher-service.focus h2 {
+        color: #ffffff; }
+      .cipher-service.focus p {
+        color: rgba(255, 255, 255, 0.5); } }
+
+.separator {
+  position: relative;
+  height: 500px;
+  background-image: url(../img/pineforestdusk.png);
+  z-index: 2;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 @media screen and (max-width: 991px) {
-  .cd-background-wrapper .foreground .hero_content {
+  .cipher-background-wrapper .foreground .hero_content {
     height: 400px; }
-    .cd-background-wrapper .foreground .hero_content .hero_title h4 {
+    .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
       padding-bottom: 40px; }
-    .cd-background-wrapper .foreground .hero_content .hero_title h1 {
+    .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
       font-size: 80px; }
-    .cd-background-wrapper .foreground .hero_content .hero_title img {
+    .cipher-background-wrapper .foreground .hero_content .hero_title img {
       width: 100px; } }
 @media screen and (max-width: 680px) {
-  .cd-background-wrapper .foreground .hero_content {
+  .cipher-background-wrapper .foreground .hero_content {
     height: 300px; }
-    .cd-background-wrapper .foreground .hero_content .hero_title h4 {
+    .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
       padding-bottom: 30px; }
-    .cd-background-wrapper .foreground .hero_content .hero_title h1 {
+    .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
       font-size: 60px; }
-    .cd-background-wrapper .foreground .hero_content .hero_title img {
+    .cipher-background-wrapper .foreground .hero_content .hero_title img {
       width: 80px; } }
 @media screen and (max-width: 465px) {
-  .cd-background-wrapper .foreground .hero_content {
+  .cipher-background-wrapper .foreground .hero_content {
     height: 50px;
     padding-top: 10%; }
-    .cd-background-wrapper .foreground .hero_content .hero_title {
+    .cipher-background-wrapper .foreground .hero_content .hero_title {
       padding-bottom: 20px; }
-      .cd-background-wrapper .foreground .hero_content .hero_title h4 {
+      .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
         padding-bottom: 5px; }
-      .cd-background-wrapper .foreground .hero_content .hero_title h1 {
+      .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
         font-size: 40px; }
-      .cd-background-wrapper .foreground .hero_content .hero_title img {
+      .cipher-background-wrapper .foreground .hero_content .hero_title img {
         width: 60px; }
-    .cd-background-wrapper .foreground .hero_content .use-btn {
+    .cipher-background-wrapper .foreground .hero_content .use-btn {
       display: none; } }
 
 /*# sourceMappingURL=style.css.map */
