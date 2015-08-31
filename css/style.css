@@ -238,13 +238,13 @@ html, body {
 
 @media only screen and (min-width: 1024px) {
   body.new-color-1::before {
-    background-color: #c06c69; }
+    background-color: rgba(255, 154, 64, 0.9); }
 
   body.new-color-2::before {
-    background-color: #bf69c0; }
+    background-color: #0c7367; }
 
   body.new-color-3::before {
-    background-color: #699ec0; } }
+    background-color: rgba(223, 78, 94, 0.8); } }
 body::before, body::after {
   /* the 2 underneath colored sections */
   content: '';
@@ -264,7 +264,7 @@ body::before, body::after {
 
 body::before {
   top: 0;
-  background-color: #f4bd89;
+  background-color: #df4e5e;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   transition: all 0.8s; }
@@ -292,7 +292,7 @@ header {
     width: 90%;
     max-width: 1024px;
     text-align: center;
-    color: #699ec0;
+    color: rgba(223, 78, 94, 0.8);
     font-size: 56px;
     font-size: 3.5rem; }
 
@@ -399,6 +399,11 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 90%; }
+
+.orders {
+  background-color: #001B1B;
+  padding: 200px;
+  color: #fafafa; }
 
 @media screen and (max-width: 991px) {
   .cipher-background-wrapper .foreground .hero_content {
