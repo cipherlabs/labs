@@ -61,7 +61,7 @@ body {
   background-color: #041938; }
 
 a {
-  color: #196a74;
+  color: #4E3E6B;
   text-decoration: none; }
 
 /* -------------------------------- 
@@ -271,7 +271,7 @@ body::before {
 
 body::after {
   top: 50%;
-  background-color: #196a74; }
+  background-color: #4E3E6B; }
 
 header {
   position: relative;
@@ -375,7 +375,7 @@ header {
       .cipher-service.cipher-service-4::before {
         background-image: url("../img/cipher-icon-4-large.svg"); }
       .cipher-service h2, .cipher-service p {
-        color: #196a74;
+        color: #4E3E6B;
         -webkit-transition: color, 0.5s;
         -moz-transition: color, 0.5s;
         transition: color, 0.5s; }
