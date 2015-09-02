@@ -61,7 +61,7 @@ body {
   background-color: #041938; }
 
 a {
-  color: #196a74;
+  color: #4E3E6B;
   text-decoration: none; }
 
 /* -------------------------------- 
@@ -70,7 +70,7 @@ Main Components
 
 -------------------------------- */
 .cipher-background-wrapper {
-  background-color: #001426;
+  background-color: #041938;
   position: relative;
   overflow: hidden; }
   .no-touch .cipher-background-wrapper {
@@ -238,13 +238,13 @@ html, body {
 
 @media only screen and (min-width: 1024px) {
   body.new-color-1::before {
-    background-color: #c06c69; }
+    background-color: rgba(255, 154, 64, 0.9); }
 
   body.new-color-2::before {
-    background-color: #bf69c0; }
+    background-color: #0c7367; }
 
   body.new-color-3::before {
-    background-color: #699ec0; } }
+    background-color: rgba(223, 78, 94, 0.8); } }
 body::before, body::after {
   /* the 2 underneath colored sections */
   content: '';
@@ -264,14 +264,14 @@ body::before, body::after {
 
 body::before {
   top: 0;
-  background-color: #f4bd89;
+  background-color: #df4e5e;
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   transition: all 0.8s; }
 
 body::after {
   top: 50%;
-  background-color: #196a74; }
+  background-color: #4E3E6B; }
 
 header {
   position: relative;
@@ -292,7 +292,7 @@ header {
     width: 90%;
     max-width: 1024px;
     text-align: center;
-    color: #699ec0;
+    color: rgba(223, 78, 94, 0.8);
     font-size: 56px;
     font-size: 3.5rem; }
 
@@ -375,7 +375,7 @@ header {
       .cipher-service.cipher-service-4::before {
         background-image: url("../img/cipher-icon-4-large.svg"); }
       .cipher-service h2, .cipher-service p {
-        color: #196a74;
+        color: #4E3E6B;
         -webkit-transition: color, 0.5s;
         -moz-transition: color, 0.5s;
         transition: color, 0.5s; }
@@ -394,10 +394,28 @@ header {
 .separator {
   position: relative;
   height: 500px;
-  background-image: url(../img/pineforestdusk.png);
+  background-image: url(../img/pineforestdusk.jpg);
+  height: 300px;
   z-index: 2;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position-y: 90%; }
+
+.orders {
+  background-color: #001B1B;
+  padding: 200px;
+  color: #fafafa; }
+
+#footer {
+  background-color: #001B1B; }
+  #footer h2 {
+    color: #FAFAFA; }
+
+.footer_logo img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  padding: 50px 0; }
 
 @media screen and (max-width: 991px) {
   .cipher-background-wrapper .foreground .hero_content {

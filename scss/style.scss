@@ -253,7 +253,7 @@ body::before, body::after {
 
 body::before {
 	top: 0;
-	background-color: #f4bd89;
+	background-color: #df4e5e;
 	@include transition(all .8s);
 }
 
@@ -423,12 +423,30 @@ header {
 .separator {
 	position: relative;
 	height: 500px;
-	background-image: url(../img/pineforestdusk.png);
+	background-image: url(../img/pineforestdusk.jpg);
+	height:300px;
 	z-index: 2;
 	background-size: cover;
 	background-repeat: no-repeat;
+  background-position-y: 90%;
 }
-
+.orders {
+	background-color: #001B1B;
+	padding: 200px;
+	color: #fafafa;
+}
+#footer {
+	background-color: #001B1B;
+	h2 {
+		color: $grey50;
+	}
+}
+.footer_logo img {
+	width: 500px;
+	display: block;
+	margin: 0 auto;
+	padding: 50px 0;
+}
 @media screen and (max-width:991px){ 
 	.cipher-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h4 { padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
 }
