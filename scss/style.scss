@@ -424,6 +424,7 @@ header {
 	position: relative;
 	height: 500px;
 	background-image: url(../img/pineforestdusk.jpg);
+	height:300px;
 	z-index: 2;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -444,6 +445,7 @@ header {
 	width: 500px;
 	display: block;
 	margin: 0 auto;
+	padding: 50px 0;
 }
 @media screen and (max-width:991px){ 
 	.cipher-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h4 { padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
