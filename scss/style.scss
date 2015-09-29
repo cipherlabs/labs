@@ -21,6 +21,7 @@ html {
 body {
 	font: {
 		family: $lightfont; // variables inside partials > _variables.scss
+		overflow-x: hidden !important;
 	}
 	background-color: #041938;
 }
@@ -420,40 +421,33 @@ header {
 	}
 }
 
-.separator {
-	position: relative;
-	height: 500px;
-	background-image: url(../img/pineforestdusk.jpg);
-	height:300px;
-	z-index: 2;
-	background-size: cover;
-	background-repeat: no-repeat;
-  background-position-y: 90%;
-}
+.separator { position: relative;height: 500px;background-image: url(../img/pineforestdusk.jpg);height:300px;z-index: 2;background-size: cover;background-repeat: no-repeat;background-position-y: 90%;}
 .orders {
-	background-color: #001B1B;
-	padding: 200px;
-	color: #fafafa;
+	background-color: #67393e; color: #fafafa; padding: 100px 50px;
+	p {max-width: 600px; margin: 0 auto;}
 }
-#footer {
-	background-color: #001B1B;
-	h2 {
-		color: $grey50;
-	}
+#footer { background-color: #212121;
+	h2 {color: $grey50;}
 }
-.footer_logo img {
-	width: 500px;
-	display: block;
-	margin: 0 auto;
-	padding: 50px 0;
+.footer_logo {
+img { width: 500px;display: block;margin: 0 auto;padding: 50px 0;}
 }
 @media screen and (max-width:991px){ 
-	.cipher-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h4 { padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
+.cipher-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h4 { padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
 }
 
 @media screen and (max-width:680px){
-	.cipher-background-wrapper .foreground .hero_content { height: 300px;  .hero_title { h4 { padding-bottom: 30px; } h1 { font-size: 60px;} img { width: 80px; }} }	
+.cipher-background-wrapper .foreground .hero_content { height: 300px;  .hero_title { h4 { padding-bottom: 30px; } h1 { font-size: 60px;} img { width: 80px; }} }	
+.footer_logo {
+	img { width: 300px;display: block;margin: 0 auto;padding: 50px 0;}
+}	
 }
 @media screen and (max-width:465px){
-	.cipher-background-wrapper { .foreground .hero_content { height: 50px; padding-top: 10%; .hero_title { padding-bottom: 20px; h4 { padding-bottom: 5px; } h1 { font-size: 40px;} img { width: 60px; } } .use-btn { display: none; } }}
+.cipher-background-wrapper { .foreground .hero_content { height: 50px; padding-top: 10%; .hero_title { padding-bottom: 20px; h4 { padding-bottom: 5px; } h1 { font-size: 40px;} img { width: 60px; } } .use-btn, .learn-btn { display: none; } }}
+.footer_logo {
+	img { width: 200px;display: block;margin: 0 auto;}
+}
 } 
+@media screen and (min-width:465px) {
+	.hero-title { h3 { display: none !important;  } }
+}
