@@ -90,24 +90,24 @@ Main Components
     .cipher-background-wrapper .foreground .hero_content {
       width: 500px;
       display: block;
-      margin: 0 20%;
-      padding-top: 20%;
+      margin: 0 0 0 10%;
+      padding-top: 10%;
       height: 500px;
       padding-bottom: 100px; }
-      .cipher-background-wrapper .foreground .hero_content .hero_title {
-        padding-bottom: 50px; }
-        .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
-          padding-bottom: 50px; }
-        .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
-          font-size: 100px;
-          color: #FAFAFA;
-          font-weight: 300;
-          vertical-align: middle;
-          display: inline-block; }
-        .cipher-background-wrapper .foreground .hero_content .hero_title img {
-          display: inline-block;
-          vertical-align: middle;
-          width: 120px; }
+      .cipher-background-wrapper .foreground .hero_content .hero_title h2 {
+        color: #f9bb3c;
+        font-size: 30px;
+        padding: 20px 0 60px 0; }
+      .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
+        font-size: 100px;
+        color: #FAFAFA;
+        font-weight: 300;
+        vertical-align: middle;
+        display: inline-block; }
+      .cipher-background-wrapper .foreground .hero_content .hero_title img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 120px; }
       .cipher-background-wrapper .foreground .hero_content #icon_font {
         font-size: 30px; }
 
@@ -163,7 +163,7 @@ Main Components
 
 .use-btn {
   display: inline-block;
-  margin: 20px 20px;
+  margin: 0 20px 0 0;
   padding: 20px 50px;
   border-radius: 2px;
   background-color: #31bda5;
@@ -279,7 +279,7 @@ header {
   height: 50%;
   background-color: #041938;
   z-index: 2; }
-  header h1 {
+  header h2 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -290,12 +290,14 @@ header {
     -ms-transform: translateX(-50%) translateY(-50%);
     -o-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    width: 90%;
-    max-width: 1024px;
+    width: 80%;
+    max-width: 768px;
     text-align: center;
-    color: rgba(223, 78, 94, 0.8);
+    color: #df4e5e;
     font-size: 56px;
-    font-size: 3.5rem; }
+    font-size: 3.5rem;
+    line-height: 70px;
+    letter-spacing: 2px; }
 
 .cipher-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
@@ -394,21 +396,17 @@ header {
 
 .separator {
   position: relative;
-  height: 500px;
+  height: 700px;
   background-image: url(../img/pineforestdusk.jpg);
-  height: 300px;
   z-index: 2;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 90%; }
 
-.orders {
+.work_items {
   background-color: #67393e;
   color: #fafafa;
   padding: 100px 50px; }
-  .orders p {
-    max-width: 600px;
-    margin: 0 auto; }
 
 #footer {
   background-color: #212121; }
@@ -424,7 +422,8 @@ header {
 @media screen and (max-width: 991px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 400px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
+    .cipher-background-wrapper .foreground .hero_content .hero_title h2 {
+      font-size: 30px;
       padding-bottom: 40px; }
     .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
       font-size: 80px; }
@@ -433,7 +432,8 @@ header {
 @media screen and (max-width: 680px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 300px; }
-    .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
+    .cipher-background-wrapper .foreground .hero_content .hero_title h2 {
+      font-size: 25px;
       padding-bottom: 30px; }
     .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
       font-size: 60px; }
@@ -448,10 +448,11 @@ header {
 @media screen and (max-width: 465px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 50px;
-    padding-top: 10%; }
+    padding-top: 15%; }
     .cipher-background-wrapper .foreground .hero_content .hero_title {
       padding-bottom: 20px; }
-      .cipher-background-wrapper .foreground .hero_content .hero_title h4 {
+      .cipher-background-wrapper .foreground .hero_content .hero_title h2 {
+        font-size: 20px;
         padding-bottom: 5px; }
       .cipher-background-wrapper .foreground .hero_content .hero_title h1 {
         font-size: 40px; }
