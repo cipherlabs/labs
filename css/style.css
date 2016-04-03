@@ -434,6 +434,31 @@ header {
     font-size: 15px;
     color: #31BDA5; }
 
+@media screen and (max-width: 1023px) {
+  header {
+    position: relative;
+    height: 50%;
+    background-color: #041938;
+    z-index: 2; }
+    header h2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      width: 80%;
+      max-width: 768px;
+      text-align: center;
+      color: #df4e5e;
+      font-size: 40px;
+      font-size: 2.5rem;
+      line-height: 50px;
+      letter-spacing: 2px; } }
 @media screen and (max-width: 991px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 400px; }
@@ -459,7 +484,32 @@ header {
     width: 300px;
     display: block;
     margin: 0 auto;
-    padding: 50px 0; } }
+    padding: 50px 0; }
+
+  header {
+    position: relative;
+    height: 50%;
+    background-color: #041938;
+    z-index: 2; }
+    header h2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      width: 80%;
+      max-width: 768px;
+      text-align: center;
+      color: #df4e5e;
+      font-size: 30px;
+      font-size: 1.875rem;
+      line-height: 40px;
+      letter-spacing: 2px; } }
 @media screen and (max-width: 465px) {
   .cipher-background-wrapper .foreground .hero_content {
     height: 50px;
@@ -479,7 +529,32 @@ header {
   .footer_logo img {
     width: 200px;
     display: block;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  header {
+    position: relative;
+    height: 50%;
+    background-color: #041938;
+    z-index: 2; }
+    header h2 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      width: 80%;
+      max-width: 768px;
+      text-align: center;
+      color: #df4e5e;
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 30px;
+      letter-spacing: 2px; } }
 @media screen and (min-width: 465px) {
   .hero-title h3 {
     display: none !important; } }

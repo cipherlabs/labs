@@ -415,6 +415,11 @@ img { width: 500px;display: block;margin: 0 auto;padding: 0;}
 .contact { color: #fff; text-align: center; padding: 50px 0 50px 0; font-family: $mediumfont;
 	p { line-height: 40px; font-size: 15px; color: #31BDA5; }
 }
+@media screen and (max-width:1023px) {
+	header { position: relative;height: 50%;background-color: #041938;z-index: 2;
+		h2 {position: absolute;@include center;width: 80%;max-width: $M;text-align: center;color: $color3;@include font-size(40px); line-height: 50px; letter-spacing: 2px;}
+	}
+}
 @media screen and (max-width:991px){ 
 .cipher-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h2 { font-size: 30px; padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
 }
@@ -424,13 +429,19 @@ img { width: 500px;display: block;margin: 0 auto;padding: 0;}
 .cipher-background-wrapper .foreground .hero_content { height: 300px;  .hero_title { h2 { font-size: 25px; padding-bottom: 30px; } h1 { font-size: 60px;} img { width: 80px; }} }	
 .footer_logo {
 	img { width: 300px;display: block;margin: 0 auto;padding: 50px 0;}
-}	
+}
+	header { position: relative;height: 50%;background-color: #041938;z-index: 2;
+		h2 {position: absolute;@include center;width: 80%;max-width: $M;text-align: center;color: $color3;@include font-size(30px); line-height: 40px; letter-spacing: 2px;}
+	}	
 }
 @media screen and (max-width:465px){
 .cipher-background-wrapper { .foreground .hero_content { height: 50px; padding-top: 15%; .hero_title { padding-bottom: 20px; h2 { font-size: 20px; padding-bottom: 5px; } h1 { font-size: 40px;} img { width: 60px; } } .use-btn, .learn-btn { display: none; } }}
 .footer_logo {
 	img { width: 200px;display: block;margin: 0 auto;}
 }
+	header { position: relative;height: 50%;background-color: #041938;z-index: 2;
+		h2 {position: absolute;@include center;width: 80%;max-width: $M;text-align: center;color: $color3;@include font-size(20px); line-height: 30px; letter-spacing: 2px;}
+	}
 } 
 @media screen and (min-width:465px) {
 	.hero-title { h3 { display: none !important;  } }
