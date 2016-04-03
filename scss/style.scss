@@ -397,7 +397,7 @@ header { position: relative;height: 50%;background-color: #041938;z-index: 2;
 	}
 }
 
-.separator { position: relative;height: 700px;background-image: url(../img/pineforestdusk.jpg);;z-index: 2;background-size: cover;background-repeat: no-repeat;background-position-y: 90%;}
+.separator { position: relative;height: 400px;background-image: url(../img/pineforestdusk.jpg);;z-index: 2;background-size: cover;background-repeat: no-repeat;background-position-y: 90%;}
 .work_items {
 	background-color: #67393e; color: #fafafa; padding: 100px 50px;
 }
@@ -405,7 +405,14 @@ header { position: relative;height: 50%;background-color: #041938;z-index: 2;
 	h2 {color: $grey50;}
 }
 .footer_logo {
-img { width: 500px;display: block;margin: 0 auto;padding: 50px 0;}
+img { width: 500px;display: block;margin: 0 auto;padding: 0;}
+}
+.footer_cta {
+	text-align: center;
+	padding:100px 0;
+}
+.contact { color: #fff; text-align: center; padding: 0 0 50px 0; 
+	p { line-height: 40px; font-size: 15px; color: #31BDA5; }
 }
 @media screen and (max-width:991px){ 
 .cipher-background-wrapper .foreground .hero_content { height: 400px; .hero_title { h2 { font-size: 30px; padding-bottom: 40px; } h1 { font-size: 80px;} img { width: 100px; } } } 
